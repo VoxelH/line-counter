@@ -13,7 +13,10 @@ project ("line-counter")
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (line-counter "main.cpp" "fs.cpp" "fs.hpp" "str.hpp" "utils.hpp" "utils.cpp" "cmdparser.hpp" "cmdparser.cpp")
+
+if (MSVC)
 target_compile_options (line-counter PRIVATE /utf-8)
+endif()
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET line-counter PROPERTY CXX_STANDARD 17)

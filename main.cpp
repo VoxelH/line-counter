@@ -30,7 +30,6 @@ int main()
 	catch (const std::exception& e)
 	{
 		writeln_stdout(u8tou16(e.what()));
-		writeln_stdout(u8tou16())
 		return -1;
 	}
 
